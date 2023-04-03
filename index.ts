@@ -219,6 +219,8 @@ const urls = [
   "https://www.youtube.com/",
   "https://www.bbc.com/",
   "https://www.reddit.com/",
+  "https://www.nytimes.com/",
+  "https://news.ycombinator.com/",
 ];
 for (const url of urls) {
   const page = await fetch(url);
@@ -230,6 +232,7 @@ for (const url of urls) {
     trimWhitespace: true,
     removeLinkTags: true,
     removeMetaTags: true,
+    removeStyleTags: true,
     removeNonSemanticSvgTags: true,
   });
 
@@ -261,5 +264,3 @@ table.push(
   })
 );
 console.log(table.toString());
-
-console.log(results[1].reducedHtml);
