@@ -2,6 +2,14 @@
 
 This repository is an experiment in reducing the size of HTML not by conventional compression, but by removing attributes and data that do not semantically contribute to the document. This is helpful for feeding into an AI model that is scraping the document for information.
 
+## How to use
+
+This project uses Deno. To run it, you need to install Deno. Once you have installed Deno, you can run it with:
+
+```bash
+deno run --allow-net index.ts
+```
+
 ## Results
 
 These are the current results of reducing some popular websites, as of April 2, 2022. This is with all options enabled.
